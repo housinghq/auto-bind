@@ -1,19 +1,18 @@
-# auto-bind [![Build Status](https://travis-ci.org/sindresorhus/auto-bind.svg?branch=master)](https://travis-ci.org/sindresorhus/auto-bind)
+# react-auto-bind [![Build Status](https://travis-ci.org/housinghq/react-auto-bind.svg?branch=master)](https://travis-ci.org/housinghq/react-auto-bind)
 
-> Automatically bind methods to their class instance
+> Automatically bind methods to their class instance. This is optimized for react. It doesn't bind render and other lifecycle methods.
 
 
 ## Install
 
 ```
-$ npm install --save auto-bind
+$ npm install --save react-auto-bind
 ```
-
 
 ## Usage
 
 ```js
-const autoBind = require('auto-bind');
+const autoBind = require('react-auto-bind');
 
 class Unicorn {
 	constructor(name) {
@@ -43,8 +42,4 @@ message();
 ## Related
 
 - [bind-methods](https://github.com/sindresorhus/bind-methods) - Bind all methods in an object to itself or a specified context
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+- [auto-bind](https://github.com/sindresorhus/auto-bind) - Automatically bind methods to their class instance.

@@ -1,13 +1,12 @@
 {
-  "name": "auto-bind",
-  "version": "0.1.0",
-  "description": "Automatically bind methods to their class instance",
+  "name": "react-auto-bind",
+  "version": "0.2.0",
+  "description": "Automatically bind methods to their class instance in React",
   "license": "MIT",
-  "repository": "sindresorhus/auto-bind",
+  "repository": "housinghq/react-auto-bind",
   "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "name": "Ritesh Kumar",
+    "email": "rkritesh078@gmail.com"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -29,7 +28,8 @@
     "instance",
     "function",
     "this",
-    "self"
+    "self",
+    "react-auto-bind"
   ],
   "devDependencies": {
     "ava": "*",
