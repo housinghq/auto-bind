@@ -1,3 +1,5 @@
+/* global define, window */
+
 'use strict';
 
 var exclude = [
@@ -12,10 +14,10 @@ var exclude = [
 	'componentWillMount'
 ];
 
-function reactAutoBind (self, ...bindOnly) {
+function reactAutoBind(self, ...bindOnly) {
 	((bindOnly.length && bindOnly) || Object.getOwnPropertyNames(self.constructor.prototype))
 	.forEach(function (key) {
-		const val = self[key]
+		const val = self[key];
 
 		if (key !== 'constructor' && typeof val === 'function') {
 			if (exclude.indexOf(key) === -1) {
@@ -25,7 +27,7 @@ function reactAutoBind (self, ...bindOnly) {
 	});
 
 	return self;
-};
+}
 
 if (typeof module !== 'undefined' && module.exports) {
 	module.exports = reactAutoBind;
