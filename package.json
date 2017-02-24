@@ -1,7 +1,7 @@
 {
   "name": "react-auto-bind",
-  "version": "0.2.0",
-  "description": "Automatically bind methods to their class instance in React",
+  "version": "0.3.0",
+  "description": "Auto bind methods to their class instance excluding React Lifecycle Methods",
   "license": "MIT",
   "repository": "housinghq/react-auto-bind",
   "author": {
@@ -9,10 +9,11 @@
     "email": "rkritesh078@gmail.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && ava",
+    "dist": "babel index.js -o dist/react-auto-bind.js"
   },
   "files": [
     "index.js"
@@ -33,6 +34,8 @@
   ],
   "devDependencies": {
     "ava": "*",
+    "babel-cli": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
     "xo": "*"
   }
 }

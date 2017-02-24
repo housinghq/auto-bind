@@ -2,22 +2,15 @@
 
 'use strict';
 
-var exclude = [
-	'render',
-	'componentWillReceiveProps',
-	'componentDidMount',
-	'componentDidUpdate',
-	'shouldComponentUpdate',
-	'componentWillUnmount',
-	'componentWillUpdate',
-	'forceUpdate',
-	'componentWillMount'
-];
+var exclude = ['render', 'componentWillReceiveProps', 'componentDidMount', 'componentDidUpdate', 'shouldComponentUpdate', 'componentWillUnmount', 'componentWillUpdate', 'forceUpdate', 'componentWillMount'];
 
-function reactAutoBind(self, ...bindOnly) {
-	((bindOnly.length && bindOnly) || Object.getOwnPropertyNames(self.constructor.prototype))
-	.forEach(function (key) {
-		const val = self[key];
+function reactAutoBind(self) {
+	for (var _len = arguments.length, bindOnly = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+		bindOnly[_key - 1] = arguments[_key];
+	}
+
+	(bindOnly.length && bindOnly || Object.getOwnPropertyNames(self.constructor.prototype)).forEach(function (key) {
+		var val = self[key];
 
 		if (key !== 'constructor' && typeof val === 'function') {
 			if (exclude.indexOf(key) === -1) {
