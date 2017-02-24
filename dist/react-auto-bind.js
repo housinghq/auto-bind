@@ -1,3 +1,5 @@
+/* global define, window */
+
 'use strict';
 
 var exclude = ['render', 'componentWillReceiveProps', 'componentDidMount', 'componentDidUpdate', 'shouldComponentUpdate', 'componentWillUnmount', 'componentWillUpdate', 'forceUpdate', 'componentWillMount'];
@@ -18,7 +20,7 @@ function reactAutoBind(self) {
 	});
 
 	return self;
-};
+}
 
 if (typeof module !== 'undefined' && module.exports) {
 	module.exports = reactAutoBind;
