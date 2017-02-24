@@ -26,17 +26,30 @@ class Unicorn {
 
 const unicorn = new Unicorn('Rainbow');
 
-// grab the method off the class instance
+// Grab the method off the class instance
 const message = unicorn.message;
 
-// still bound to the class instance
+// Still bound to the class instance
 message();
 //=> 'Rainbow is awesome!'
 
-// without `autoBind(this)`, the above would have resulted in
+// Without `autoBind(this)`, the above would have resulted in
 message();
 //=> Error: Cannot read property 'name' of undefined
 ```
+
+
+## API
+
+### autoBind(self)
+
+Bind methods in `self` to their class instance. Returns the `self` object.
+
+#### self
+
+Type: `Object`
+
+Object with methods to bind.
 
 
 ## Related
