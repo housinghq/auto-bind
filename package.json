@@ -16,7 +16,8 @@
     "dist": "babel index.js -o dist/react-auto-bind.js"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "dist/react-auto-bind.js"
   ],
   "keywords": [
     "auto",
