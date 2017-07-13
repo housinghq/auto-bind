@@ -15,6 +15,7 @@
     "test": "xo && ava",
     "dist": "babel index.js -o dist/react-auto-bind.js"
   },
+  "main": "dist/react-auto-bind.js",
   "files": [
     "index.js",
     "dist/react-auto-bind.js"
