@@ -28,15 +28,13 @@ const reactAutoBind = (self, ...bindOnly) => {
 	});
 
 	return self;
-}
+};
 
 if (typeof module !== 'undefined' && module.exports) {
 	module.exports = reactAutoBind;
 } else if (typeof define === 'function' && define.amd) {
 	// Register as 'react-auto-bind', consistent with npm package name
-	define('react-auto-bind', [], function () {
-		return reactAutoBind;
-	});
+	define('react-auto-bind', [], () => reactAutoBind);
 } else {
 	window.reactAutoBind = reactAutoBind;
 }
