@@ -1,6 +1,6 @@
 {
   "name": "react-auto-bind",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Auto bind methods to their class instance excluding React Lifecycle Methods",
   "license": "MIT",
   "repository": "housinghq/react-auto-bind",
