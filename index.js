@@ -15,9 +15,9 @@ const exclude = [
 	'componentWillMount'
 ];
 
-function reactAutoBind(self, ...bindOnly) {
+const reactAutoBind = (self, ...bindOnly) => {
 	((bindOnly.length && bindOnly) || Object.getOwnPropertyNames(self.constructor.prototype))
-	.forEach((key) => {
+	.forEach(key => {
 		const val = self[key];
 
 		if (key !== 'constructor' && typeof val === 'function') {
