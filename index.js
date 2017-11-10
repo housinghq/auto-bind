@@ -7,6 +7,7 @@ var exclude = [
 	'componentWillReceiveProps',
 	'componentDidMount',
 	'componentDidUpdate',
+	'componentDidCatch',
 	'shouldComponentUpdate',
 	'componentWillUnmount',
 	'componentWillUpdate',
