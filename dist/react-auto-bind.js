@@ -2,9 +2,9 @@
 
 'use strict';
 
-var exclude = ['render', 'componentWillReceiveProps', 'componentDidMount', 'componentDidUpdate', 'shouldComponentUpdate', 'componentWillUnmount', 'componentWillUpdate', 'forceUpdate', 'componentWillMount'];
+var exclude = ['render', 'componentWillReceiveProps', 'componentDidMount', 'componentDidUpdate', 'componentDidCatch', 'shouldComponentUpdate', 'componentWillUnmount', 'componentWillUpdate', 'forceUpdate', 'componentWillMount'];
 
-function reactAutoBind(self) {
+var reactAutoBind = function reactAutoBind(self) {
 	for (var _len = arguments.length, bindOnly = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
 		bindOnly[_key - 1] = arguments[_key];
 	}
@@ -20,12 +20,12 @@ function reactAutoBind(self) {
 	});
 
 	return self;
-}
+};
 
 if (typeof module !== 'undefined' && module.exports) {
 	module.exports = reactAutoBind;
 } else if (typeof define === 'function' && define.amd) {
-	// register as 'react-auto-bind', consistent with npm package name
+	// Register as 'react-auto-bind', consistent with npm package name
 	define('react-auto-bind', [], function () {
 		return reactAutoBind;
 	});
